@@ -8,7 +8,7 @@ ADD_SHORTCUT="defaults write ${CAPTUREONE} NSUserKeyEquivalents -dict-add"
 
 
 echo "Copying scripts..."
-for d in "${SCRIPT_DIR}"/*.applescript ; do \
+for d in "${SCRIPT_DIR}/Capture One Scripts"/*.applescript ; do \
   echo "  ${d}"
   cp "${d}" "${INSTALL_DIR}"
 done
