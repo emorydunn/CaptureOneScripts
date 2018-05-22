@@ -1,5 +1,5 @@
 (*
-	Apply keywords to all variants in the current collection.
+	Apply keywords from the clipboard to all variants in the current collection.
 
 	Each line of text in the clipboard is applied as a separate keyword. The keywords
 	are added to the whatever the current keywords are.
