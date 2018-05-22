@@ -43,6 +43,6 @@ If the boolean in `addFavorites(_:_:)` is `true` then the capture directory will
 
 Moves the capture directory up or down the list of favorites relative to the current capture directory. 
 
-_Note_: Due to a change in how [Capture One returns favorites][] in 10+ this script only works in Capture One 9. 
+_Note_: Due to a change in how [Capture One returns favorites][favorite_order] in 10+ this script only works in Capture One 9. 
 
 [favorite_order]: https://emorydunn.com/2018/02/27/Capture-One-Collections-and-AppleScript
