@@ -18,4 +18,7 @@ ${ADD_SHORTCUT} "ScriptsApplyKeywords" "@\$k"
 
 ${ADD_SHORTCUT} "ScriptsmakeNewDir" "^n"
 ${ADD_SHORTCUT} "ScriptsmakeNewDirNoCapture" "^\$n"
+
+${ADD_SHORTCUT} "ScriptsselectPreviousCapture" "^↑"
+${ADD_SHORTCUT} "ScriptsselectNextCapture" "^↓"
 echo "Done"

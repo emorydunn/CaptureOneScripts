@@ -3,9 +3,11 @@ A collection of AppleScripts for use with Capture One.
 
 | Script                | Compatability | Shortcut       |
 |-----------------------|--------------:|----------------:|
-| ApplyKeywords         | 10            | <kbd>⇧⌘K</kbd> |
-| makeNewDir            | 9             | <kbd>⌃n</kbd>  |
-| makeNewDirNoCapture   | 9             | <kbd>⌃⇧n</kbd> |
+| ApplyKeywords         | 10+            | <kbd>⇧⌘K</kbd> |
+| makeNewDir            | 9+             | <kbd>⌃n</kbd>  |
+| makeNewDirNoCapture   | 9+             | <kbd>⌃⇧n</kbd> |
+| selectNextCapture     | 9              | <kbd>⌃↑</kbd>  |
+| selectPreviousCapture | 9              | <kbd>⌃↓</kbd>  |
 
 ## Installation
 
@@ -36,3 +38,11 @@ New directories are created adjacent to the current capture directory, _unless_
 the capture directory is "Capture", in which case new folders are made inside.
 
 If the boolean in `addFavorites(_:_:)` is `true` then the capture directory will be set to the *first* directory name entered.
+
+### Select Next/ Previous Capture
+
+Moves the capture directory up or down the list of favorites relative to the current capture directory. 
+
+_Note_: Due to a change in how [Capture One returns favorites][] in 10+ this script only works in Capture One 9. 
+
+[favorite_order]: https://emorydunn.com/2018/02/27/Capture-One-Collections-and-AppleScript
