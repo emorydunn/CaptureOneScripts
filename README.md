@@ -1,13 +1,15 @@
 # CaptureOneScripts
 A collection of AppleScripts for use with Capture One. 
 
-| Script                | Compatability | Shortcut       |
-|-----------------------|--------------:|----------------:|
-| ApplyKeywords         | 10+            | <kbd>⇧⌘K</kbd> |
-| makeNewDir            | 9+             | <kbd>⌃n</kbd>  |
-| makeNewDirNoCapture   | 9+             | <kbd>⌃⇧n</kbd> |
-| selectNextCapture     | 9              | <kbd>⌃↑</kbd>  |
-| selectPreviousCapture | 9              | <kbd>⌃↓</kbd>  |
+| Script                 | Compatability | Shortcut       |
+|------------------------|--------------:|----------------:|
+| ApplyKeywords          | 10+            | <kbd>⇧⌘K</kbd> |
+| makeNewDir             | 9+             | <kbd>⌃n</kbd>  |
+| makeNewDirNoCapture    | 9+             | <kbd>⌃⇧n</kbd> |
+| selectNextCapture      | 9              | <kbd>⌃↑</kbd>  |
+| selectPreviousCapture  | 9              | <kbd>⌃↓</kbd>  |
+| smartAlbumForSelection | 9+             | |
+
 
 ## Installation
 
@@ -46,3 +48,14 @@ Moves the capture directory up or down the list of favorites relative to the cur
 _Note_: Due to a change in how [Capture One returns favorites][favorite_order] in 10+ this script only works in Capture One 9. 
 
 [favorite_order]: https://emorydunn.com/2018/02/27/Capture-One-Collections-and-AppleScript
+
+### Smart Album For Selection
+
+Creates a smart album from the name of the selected album. 
+
+There are two parameters for configuring the search terms:
+
+- `theDeliniator`, default `_`
+- `itemNumber`, default `3`
+
+The script splits the name on the deliniator and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it. 
