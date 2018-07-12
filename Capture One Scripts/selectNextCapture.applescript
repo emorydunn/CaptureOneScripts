@@ -6,26 +6,26 @@
 *)
 
 tell front document of application "Capture One 11"
-
-	set currentCaptureDir to captures
-	set captureCollection to make collection with properties {kind:favorite, file:currentCaptureDir}
+	
+	set theFolder to captures
+	set captureCollection to item 1 of (collections whose folder is theFolder)
 	log name of captureCollection as string
 	log captureCollection
-
+	
 	try
 		set newCapture to the collection after captureCollection
 		log name of newCapture as string
 		log newCapture
-
+		
 		if file of newCapture is equal to missing value then
 			log "No file for " & name of newCapture as string
 		else
 			log "Moving capture dir"
 			set captures to get the file of newCapture
 		end if
-
+		
 	on error errMsg number errNum
 		log "End of the list"
 	end try
-
+	
 end tell
