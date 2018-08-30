@@ -3,6 +3,7 @@ A collection of AppleScripts for use with Capture One.
 
 | Script                 | Compatability | Shortcut       |
 |------------------------|--------------:|----------------:|
+| AddCaptureToFavs       | 9+            | <kbd>⌃f</kbd> |
 | ApplyKeywords          | 10+            | <kbd>⇧⌘K</kbd> |
 | makeNewDir             | 9+             | <kbd>⌃n</kbd>  |
 | makeNewDirNoCapture    | 9+             | <kbd>⌃⇧n</kbd> |
@@ -19,6 +20,10 @@ The script defaults to adding shortcuts for Capture One 11. MacOS might not show
 
 
 ## The Scripts
+
+### AddCaptureToFavs
+
+Adds the current Capture Directory to favorites
 
 ### ApplyKeywords
 

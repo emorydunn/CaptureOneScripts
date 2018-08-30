@@ -21,4 +21,6 @@ ${ADD_SHORTCUT} "ScriptsmakeNewDirNoCapture" "^\$n"
 
 ${ADD_SHORTCUT} "ScriptsselectPreviousCapture" "^↑"
 ${ADD_SHORTCUT} "ScriptsselectNextCapture" "^↓"
+
+${ADD_SHORTCUT} "ScriptsAddCaptureToFavs" "^f"
 echo "Done"
