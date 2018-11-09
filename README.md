@@ -22,11 +22,11 @@ The script defaults to adding shortcuts for Capture One 11. MacOS might not show
 
 ## The Scripts
 
-### AddCaptureToFavs
+### Add Capture to Favs
 
 Adds the current Capture Directory to favorites
 
-### ApplyKeywords
+### Apply Keywords
 
 Apply keywords from the clipboard to all variants in the current collection.
 
@@ -35,7 +35,7 @@ Each line of text in the clipboard is applied as a separate keyword. The keyword
 If you need to remove all keywords, use "Reset Keywords", which will remove all
 keywords from every variant in the current collection.
 
-### MakeNewDir / MakeNewDirNoCapture
+### Make New Dir / Make New Dir No Capture
 
 Creates new directories inside of the Capture directory and sets the capture directory.
 
@@ -66,6 +66,6 @@ There are two parameters for configuring the search terms:
 
 The script splits the name on the deliniator and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it. 
 
-### BatchRenameCollection
+### Batch Rename Collection
 
 Sorts the current collection by date (ascending), sets the rename counter to 1, and renames all variants. 
