@@ -5,10 +5,10 @@
   Created by Emory Dunn
 *)
 
-tell front document of application "Capture One 11"
+tell front document of application "Capture One 12"
 	
 	set theFolder to captures
-	set captureCollection to item 1 of (collections whose folder is theFolder)
+	set captureCollection to item 1 of (collections whose folder is theFolder and user is true)
 	log name of captureCollection as string
 	log captureCollection
 	
