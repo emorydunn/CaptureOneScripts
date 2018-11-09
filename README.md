@@ -4,12 +4,13 @@ A collection of AppleScripts for use with Capture One.
 | Script                 | Compatability | Shortcut       |
 |------------------------|--------------:|----------------:|
 | AddCaptureToFavs       | 9+            | <kbd>⌃f</kbd> |
-| ApplyKeywords          | 10+            | <kbd>⇧⌘K</kbd> |
-| makeNewDir             | 9+             | <kbd>⌃n</kbd>  |
-| makeNewDirNoCapture    | 9+             | <kbd>⌃⇧n</kbd> |
-| selectNextCapture      | 12              | <kbd>⌃↑</kbd>  |
-| selectPreviousCapture  | 12              | <kbd>⌃↓</kbd>  |
-| smartAlbumForSelection | 9+             | |
+| ApplyKeywords          | 10+           | <kbd>⇧⌘K</kbd> |
+| makeNewDir             | 9+            | <kbd>⌃n</kbd>  |
+| makeNewDirNoCapture    | 9+            | <kbd>⌃⇧n</kbd> |
+| selectNextCapture      | 12            | <kbd>⌃↑</kbd>  |
+| selectPreviousCapture  | 12            | <kbd>⌃↓</kbd>  |
+| smartAlbumForSelection | 9+            | |
+| BatchRenameCollection  | 12            | |
 
 
 ## Installation
@@ -64,3 +65,7 @@ There are two parameters for configuring the search terms:
 - `itemNumber`, default `3`
 
 The script splits the name on the deliniator and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it. 
+
+### BatchRenameCollection
+
+Sorts the current collection by date (ascending), sets the rename counter to 1, and renames all variants. 
