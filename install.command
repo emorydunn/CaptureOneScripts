@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=`dirname "${0}"`
 INSTALL_DIR="${HOME}/Library/Scripts/Capture One Scripts"
-CAPTUREONE="com.phaseone.captureone11"
+CAPTUREONE="com.phaseone.captureone12"
 
 ADD_SHORTCUT="defaults write ${CAPTUREONE} NSUserKeyEquivalents -dict-add"
 

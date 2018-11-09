@@ -15,9 +15,13 @@ A collection of AppleScripts for use with Capture One.
 
 ## Installation
 
-Run `install.sh`, which will copy the scripts to `~/Library/Scripts/Capture One Scripts` and set up the keyboard shortcuts. 
+Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture One Scripts` and set up the keyboard shortcuts. 
 
-The script defaults to adding shortcuts for Capture One 11. MacOS might not show the shortcuts in System Preferences. 
+Some notes:
+
+- The script defaults to adding shortcuts for Capture One 12. 
+- Capture One should be restarted after installation
+- MacOS might not show the shortcuts in System Preferences. 
 
 
 ## The Scripts
