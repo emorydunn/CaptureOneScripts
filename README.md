@@ -7,8 +7,8 @@ A collection of AppleScripts for use with Capture One.
 | ApplyKeywords          | 10+            | <kbd>⇧⌘K</kbd> |
 | makeNewDir             | 9+             | <kbd>⌃n</kbd>  |
 | makeNewDirNoCapture    | 9+             | <kbd>⌃⇧n</kbd> |
-| selectNextCapture      | 9              | <kbd>⌃↑</kbd>  |
-| selectPreviousCapture  | 9              | <kbd>⌃↓</kbd>  |
+| selectNextCapture      | 12              | <kbd>⌃↑</kbd>  |
+| selectPreviousCapture  | 12              | <kbd>⌃↓</kbd>  |
 | smartAlbumForSelection | 9+             | |
 
 
@@ -50,7 +50,7 @@ If the boolean in `addFavorites(_:_:)` is `true` then the capture directory will
 
 Moves the capture directory up or down the list of favorites relative to the current capture directory. 
 
-_Note_: Due to a change in how [Capture One returns favorites][favorite_order] in 10+ this script only works in Capture One 9. 
+_Note_: The new versions of these scripts will only work in Capture One 12. 
 
 [favorite_order]: https://emorydunn.com/2018/02/27/Capture-One-Collections-and-AppleScript
 
