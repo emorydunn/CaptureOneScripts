@@ -61,7 +61,7 @@ Creates a smart album from the name of the selected album.
 
 There are two parameters for configuring the search terms:
 
-- `theDeliniator`, default `_`
+- `theDelimiter`, default `_`
 - `itemNumber`, default `3`
 
 The script splits the name on the deliniator and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it. 
