@@ -49,6 +49,8 @@ will repeat allowing going back to FileMaker or a spreadsheet, enter an empty st
 New directories are created adjacent to the current capture directory, _unless_
 the capture directory is "Capture", in which case new folders are made inside.
 
+If the boolean in `getDirs(_:)` is `true` then the script will only prompt for one name. 
+
 If the boolean in `addFavorites(_:_:)` is `true` then the capture directory will be set to the *first* directory name entered.
 
 ### Select Next/ Previous Capture
