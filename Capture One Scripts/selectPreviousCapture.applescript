@@ -5,22 +5,22 @@
   Created by Emory Dunn
 *)
 
-tell front document of application "Capture One 11"
+tell front document of application "Capture One 12"
 	
 	set theFolder to captures
-	set captureCollection to item 1 of (collections whose folder is theFolder)
-	log name of captureCollection as string
-	log captureCollection
+	set captureCollection to item 1 of (collections whose folder is theFolder and user is true)
+	--log name of captureCollection as string
+	--log captureCollection
 	
 	try
 		set newCapture to the collection before captureCollection
-		log name of newCapture as string
-		log newCapture
+		--log name of newCapture as string
+		--log newCapture
 		
 		if file of newCapture is equal to missing value then
 			log "No file for " & name of newCapture as string
 		else
-			log "Moving capture dir"
+			log "Setting capture dir to " & name of newCapture
 			set captures to get the file of newCapture
 		end if
 		
