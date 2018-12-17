@@ -30,10 +30,13 @@ end if
 
 
 on setKeyword(theKeyword)
-	tell front document of application "Capture One 11"
+	tell front document of application "Capture One 12"
+		--	Capture One does not allow `,` or `|` in keywords
+		set theCleanKeyword to my replace_chars(theKeyword, ",", " ")
+		set theCleanKeyword to my replace_chars(theCleanKeyword, "|", " ")
 
 		repeat with theVariant in variants of current collection
-			tell theVariant to make keyword with properties {name:theKeyword}
+			tell theVariant to make keyword with properties {name:theCleanKeyword}
 
 		end repeat
 
@@ -41,10 +44,20 @@ on setKeyword(theKeyword)
 end setKeyword
 
 on resetKeywords()
-	tell front document of application "Capture One 11"
+	tell front document of application "Capture One 12"
 
 		delete every keyword of every variant of current collection
 
 	end tell
 
 end resetKeywords
+
+-- From https://www.macosxautomation.com/applescript/sbrt/sbrt-06.html
+on replace_chars(this_text, search_string, replacement_string)
+	set AppleScript's text item delimiters to the search_string
+	set the item_list to every text item of this_text
+	set AppleScript's text item delimiters to the replacement_string
+	set this_text to the item_list as string
+	set AppleScript's text item delimiters to ""
+	return this_text
+end replace_chars

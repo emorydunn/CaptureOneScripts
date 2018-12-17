@@ -5,29 +5,27 @@
   Created by Emory Dunn
 *)
 
-tell front document of application "Capture One 9"
-  set currentCaptureDir to captures
-  set captureCollection to make collection with properties {kind:favorite, file:currentCaptureDir}
-  log captureCollection
-
-  set currentIndex to my list_position(currentCaptureDir, collections)
-
-  set nextIndex to currentIndex + 1
-  try
-    set nextCaptureDir to file of collection [nextIndex]
-    set captures to nextCaptureDir
-    return 0
-  end try
-
-  return 1
-
+tell front document of application "Capture One 12"
+	
+	set theFolder to captures
+	set captureCollection to item 1 of (collections whose folder is theFolder and user is true)
+	--log name of captureCollection as string
+	--log captureCollection
+	
+	try
+		set newCapture to the collection after captureCollection
+		--log name of newCapture as string
+		--log newCapture
+		
+		if file of newCapture is equal to missing value then
+			log "No file for " & name of newCapture as string
+		else
+			log "Setting capture dir to " & name of newCapture
+			set captures to get the file of newCapture
+		end if
+		
+	on error errMsg number errNum
+		log "End of the list"
+	end try
+	
 end tell
-
-on list_position(this_item, this_list)
-  repeat with i from 1 to the count of this_list
-    try
-      if file of item i of this_list is this_item then return i
-    end try
-  end repeat
-  return -1
-end list_position
