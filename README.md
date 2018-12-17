@@ -70,7 +70,7 @@ There are two parameters for configuring the search terms:
 - `theDelimiter`, default `_`
 - `itemNumber`, default `3`
 
-The script splits the name on the deliniator and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it. 
+The script splits the name on the delimiter and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it. 
 
 ### Batch Rename Collection
 
