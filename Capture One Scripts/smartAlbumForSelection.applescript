@@ -9,20 +9,20 @@ use AppleScript version "2.4" -- Yosemite (10.10) or later
 use scripting additions
 
 on run
-	
+
 	-- Parameters
 	set theDelimiter to "_"
 	set itemNumber to 3
-	
+
 	-- Script below
-	
+
 	tell front document of application "Capture One 12" to set selectedItem to current collection
-	
+
 	set theName to my theSplit(name of selectedItem, theDelimiter)
 	set theNameComponent to item itemNumber of theName
-	
+
 	set theRules to "<?xml version=\"1.0\" encoding=\"UTF-8\"?><MatchOperator Kind=\"AND\"><MatchOperator Kind=\"AND\"><Condition Enabled=\"YES\"><Key>displayName</Key><Operator>6</Operator><Criterion>" & theNameComponent & "</Criterion></Condition></MatchOperator></MatchOperator>"
-	
+
 	tell front document of application "Capture One 12"
 		make new collection with properties {name:theNameComponent, kind:smart album, rules:theRules}
 	end tell
