@@ -88,6 +88,8 @@ end makeDirs
 on addFavorites(dirPaths, setCapture)
 	tell front document of application "Capture One 12"
 		
+		set capture counter to 1
+		
 		-- Add all paths to favorites
 		repeat with dirPath in dirPaths
 			set captureCollection to make collection with properties {kind:favorite, file:dirPath}
