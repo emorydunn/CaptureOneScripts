@@ -6,7 +6,6 @@ A collection of AppleScripts for use with Capture One.
 | AddCaptureToFavs       | 9+            | <kbd>⌃f</kbd> |
 | ApplyKeywords          | 10+           | <kbd>⇧⌘K</kbd> |
 | makeNewDir             | 9+            | <kbd>⌃n</kbd>  |
-| makeNewDirNoCapture    | 9+            | <kbd>⌃⇧n</kbd> |
 | selectNextCapture      | 12            | <kbd>⌃↑</kbd>  |
 | selectPreviousCapture  | 12            | <kbd>⌃↓</kbd>  |
 | smartAlbumForSelection | 9+            | |
@@ -39,7 +38,7 @@ Each line of text in the clipboard is applied as a separate keyword. The keyword
 If you need to remove all keywords, use "Reset Keywords", which will remove all
 keywords from every variant in the current collection.
 
-### Make New Dir / Make New Dir No Capture
+### Make New Dir
 
 Creates new directories inside of the Capture directory and sets the capture directory.
 
