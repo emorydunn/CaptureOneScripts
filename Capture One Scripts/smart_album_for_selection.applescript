@@ -1,5 +1,5 @@
 --
---	Created by: SmartAlbum
+--	Created by: Emory Dunn
 --	Created on: 2018-03-13
 --
 --	Copyright © 2018 Emory Dunn, All Rights Reserved
