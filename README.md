@@ -1,26 +1,26 @@
 # CaptureOneScripts
-A collection of AppleScripts for use with Capture One. 
+A collection of AppleScripts for use with Capture One.
 
-| Script                 | Compatability | Shortcut       |
-|------------------------|--------------:|----------------:|
-| AddCaptureToFavs       | 9+            | <kbd>⌃f</kbd> |
-| ApplyKeywords          | 10+           | <kbd>⇧⌘K</kbd> |
-| makeNewDir             | 9+            | <kbd>⌃n</kbd>  |
-| selectNextCapture      | 12            | <kbd>⌃↑</kbd>  |
-| selectPreviousCapture  | 12            | <kbd>⌃↓</kbd>  |
-| smartAlbumForSelection | 9+            | |
-| BatchRenameCollection  | 12            | |
+| Script                    | Compatability | Shortcut       |
+|---------------------------|--------------:|----------------:|
+| add_capture_to_favs       | 9+            | <kbd>⌃f</kbd>
+| apply_keywords            | 10+           | <kbd>⇧⌘K</kbd>
+| batch_rename_collection   | 12            |
+| make_new_dir              | 9+            | <kbd>⌃n</kbd>
+| select_next_capture       | 12            | <kbd>⌃↑</kbd>
+| select_previous_capture   | 12            | <kbd>⌃↓</kbd>
+| smart_album_for_selection | 9+            |
 
 
 ## Installation
 
-Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture One Scripts` and set up the keyboard shortcuts. 
+Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture One Scripts` and set up the keyboard shortcuts.
 
 Some notes:
 
-- The script defaults to adding shortcuts for Capture One 12. 
+- The script defaults to adding shortcuts for Capture One 20.
 - Capture One should be restarted after installation
-- MacOS might not show the shortcuts in System Preferences. 
+- MacOS might not show the shortcuts in System Preferences.
 
 
 ## The Scripts
@@ -48,29 +48,30 @@ will repeat allowing going back to FileMaker or a spreadsheet, enter an empty st
 New directories are created adjacent to the current capture directory, _unless_
 the capture directory is "Capture", in which case new folders are made inside.
 
-If the boolean in `getDirs(_:)` is `true` then the script will only prompt for one name. 
+  Set `repeatPrompt` to `false` to only prompt for one name.
 
-If the boolean in `addFavorites(_:_:)` is `true` then the capture directory will be set to the *first* directory name entered.
+  If `setCaptureFolder` is `true` then the capture directory will be
+  set to the *first* directory name entered.
 
 ### Select Next/ Previous Capture
 
-Moves the capture directory up or down the list of favorites relative to the current capture directory. 
+Moves the capture directory up or down the list of favorites relative to the current capture directory.
 
-_Note_: The new versions of these scripts will only work in Capture One 12. 
+_Note_: The new versions of these scripts will only work in Capture One 12 and later.
 
 [favorite_order]: https://emorydunn.com/2018/02/27/Capture-One-Collections-and-AppleScript
 
 ### Smart Album For Selection
 
-Creates a smart album from the name of the selected album. 
+Creates a smart album from the name of the selected album.
 
 There are two parameters for configuring the search terms:
 
 - `theDelimiter`, default `_`
 - `itemNumber`, default `3`
 
-The script splits the name on the delimiter and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it. 
+The script splits the name on the delimiter and selects the `itemNumber` item in the new list for the search term. For instance, `some_file_name` would have a smart album called `name` made for it.
 
 ### Batch Rename Collection
 
-Sorts the current collection by date (ascending), sets the rename counter to 1, and renames all variants. 
+Sorts the current collection by date (ascending), sets the rename counter to 1, and renames all variants.
