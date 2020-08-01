@@ -18,10 +18,23 @@ Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture
 
 Some notes:
 
-- The script defaults to adding shortcuts for Capture One 20.
+- The script defaults to adding shortcuts for Capture One 20
 - Capture One should be restarted after installation
-- MacOS might not show the shortcuts in System Preferences.
+- macOS might not show the shortcuts in System Preferences
 
+### Showing Shortcuts in System Preferences
+
+When setting keyboard shortcuts via the command line System Preferences doesn't know to look for the shortcuts in that app. However, there is a workaround:
+
+1. [Add a shortcut][shortcut] for Capture One. Any shortcut will do.
+    - For example, just enter `Scripts` as the menu item and <kbd>⌃s</kbd> as the shortcut.
+2. Quit both Capture One and System Preferences.
+3. Run `install.command`
+4. Remove the shortcut you added in step one.
+
+Now the shortcuts can be customized from System Preferences.
+
+[shortcut]: https://support.apple.com/guide/mac-help/create-keyboard-shortcuts-for-apps-mchlp2271/mac
 
 ## The Scripts
 
