@@ -61,10 +61,12 @@ will repeat allowing going back to FileMaker or a spreadsheet, enter an empty st
 New directories are created adjacent to the current capture directory, _unless_
 the capture directory is "Capture", in which case new folders are made inside.
 
-  Set `repeatPrompt` to `false` to only prompt for one name.
+Set `repeatPrompt` to `false` to only prompt for one name.
 
-  If `setCaptureFolder` is `true` then the capture directory will be
-  set to the *first* directory name entered.
+If `setCaptureFolder` is `true` then the capture directory will be
+set to the *first* directory name entered.
+
+Set `resetCaptureCounter` to `true` to set the capture counter to 1 when making a new folder.
 
 ### Select Next/ Previous Capture
 
