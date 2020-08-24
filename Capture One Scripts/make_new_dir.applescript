@@ -98,8 +98,8 @@ end makeDirs
 on addFavorites(dirPaths, setCapture)
 	tell front document of application "Capture One 20"
 		
-		if resetCaptureCounter then
-			set capture counter to 1
+		if my resetCaptureCounter then
+			set capture counter to 0
 		end if
 		
 		-- Add all paths to favorites
