@@ -5,10 +5,10 @@ A collection of AppleScripts for use with Capture One.
 |---------------------------|--------------:|----------------:|
 | add_capture_to_favs       | 9+            | <kbd>⌃f</kbd>
 | apply_keywords            | 10+           | <kbd>⇧⌘K</kbd>
-| batch_rename_collection   | 12            |
+| batch_rename_collection   | 12+           |
 | make_new_dir              | 9+            | <kbd>⌃n</kbd>
-| select_next_capture       | 12            | <kbd>⌃↑</kbd>
-| select_previous_capture   | 12            | <kbd>⌃↓</kbd>
+| select_next_capture       | 12+           | <kbd>⌃↑</kbd>
+| select_previous_capture   | 12+           | <kbd>⌃↓</kbd>
 | smart_album_for_selection | 9+            |
 
 
@@ -19,7 +19,7 @@ Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture
 Some notes:
 
 - The script defaults to adding shortcuts for Capture One 20
-- Capture One should be restarted after installation
+- Restart Capture One after installation
 - macOS might not show the shortcuts in System Preferences
 
 ### Showing Shortcuts in System Preferences
