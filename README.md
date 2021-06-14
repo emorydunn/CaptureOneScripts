@@ -1,16 +1,19 @@
 # CaptureOneScripts
 A collection of AppleScripts for use with Capture One.
 
-| Script                    | Compatability | Shortcut       |
-|---------------------------|--------------:|----------------:|
-| add_capture_to_favs       | 9+            | <kbd>⌃f</kbd>
-| apply_keywords            | 10+           | <kbd>⇧⌘K</kbd>
-| batch_rename_collection   | 12+           |
-| make_new_dir              | 9+            | <kbd>⌃n</kbd>
-| select_next_capture       | 12+           | <kbd>⌃↑</kbd>
-| select_previous_capture   | 12+           | <kbd>⌃↓</kbd>
-| smart_album_for_selection | 9+            |
-
+| Script                          | Compatibility | Shortcut       |
+|---------------------------------|--------------:|----------------:|
+| add_capture_to_favs             | 9+            | <kbd>⌃f</kbd>
+| apply_keywords                  | 10+           | <kbd>⇧⌘K</kbd>
+| batch_rename_collection         | 12+           |
+| make_new_dir                    | 9+            | <kbd>⌃n</kbd>
+| select_next_capture             | 12+           | <kbd>⌃↑</kbd>
+| select_previous_capture         | 12+           | <kbd>⌃↓</kbd>
+| smart_album_for_selection       | 9+            |
+| select_next_primary_variant     | 12+           |
+| select_previous_primary_variant | 12+           |
+| select_next_variants            | 12+           |
+| select_previous_variants        | 12+           |
 
 ## Installation
 
@@ -90,3 +93,11 @@ The script splits the name on the delimiter and selects the `itemNumber` item in
 ### Batch Rename Collection
 
 Sorts the current collection by date (ascending), sets the rename counter to 1, and renames all variants.
+
+### Select Next/Previous Primary Variant/Variants
+
+A collection of four scripts to shift the selection of variants.
+
+The `variants` version works with multiple selected variants, similarly to <kbd>⌘→</kbd>.
+
+The `primary_variant` version only shifts the primary variant and will deselect any additional variants.
