@@ -11,4 +11,6 @@ try
 	set nextVariant to variant after currentVariant
 	deselect current document variant currentVariant
 	select current document variant nextVariant
+on error
+	select current document variant (first variant)
 end try
