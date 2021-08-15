@@ -14,6 +14,7 @@ A collection of AppleScripts for use with Capture One.
 | select_previous_primary_variant | 12+           |
 | select_next_variants            | 12+           |
 | select_previous_variants        | 12+           |
+| move_to_archive                 | 20+           |
 
 ## Installation
 
@@ -101,3 +102,10 @@ A collection of four scripts to shift the selection of variants.
 The `variants` version works with multiple selected variants, similarly to <kbd>⌘→</kbd>.
 
 The `primary_variant` version only shifts the primary variant and will deselect any additional variants.
+
+### Move to Archive
+
+This script moves the images in the current collection into a central archive folder organized by date. The RAW file is relinked in the catalogue after the move. 
+
+_Note_: Before running the script make sure to set the location of your archive. 
+
