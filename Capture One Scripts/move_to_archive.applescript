@@ -46,7 +46,7 @@ tell front document of application "Capture One 20"
 		
 		set newLocation to theFolder & "/" & name of thePhoto
 		
-		do shell script moveCommand & " " & "'" & path of thePhoto & "'" & " " & "'" & theFolder & "'"
+		do shell script moveCommand & " " & "\"" & path of thePhoto & "\"" & " " & "\"" & theFolder & "\""
 		relink thePhoto to path newLocation
 		
 		tell application "Capture One 20"
