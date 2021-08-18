@@ -15,9 +15,9 @@
 (* Options *)
 set rootArchive to POSIX path of "/Volumes/Photogravure/Archive/"
 
-# If you'd prefer to copy or link the files 
-# instead of moving them, enter a different command here
-set moveCommand to "mv"
+# By default the script hard links the files
+# If you'd prefer to copy or move the files enter the command here
+set moveCommand to "ln"
 
 (* Script *)
 tell front document of application "Capture One 20"
