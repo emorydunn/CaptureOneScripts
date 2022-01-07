@@ -26,6 +26,7 @@ Some notes:
 - The script defaults to adding shortcuts for Capture One 20
 - Restart Capture One after installation
 - macOS might not show the shortcuts in System Preferences
+- Background scripts are _not_ installed by default, please copy the ones you want to use manually
 
 ### Showing Shortcuts in System Preferences
 
