@@ -15,6 +15,7 @@ A collection of AppleScripts for use with Capture One.
 | select_next_variants            | 12+           |
 | select_previous_variants        | 12+           |
 | move_to_archive                 | 20+           |
+| camera_settings_check           | 20+           |
 
 ## Installation
 
@@ -109,3 +110,10 @@ This script moves the images in the current collection into a central archive fo
 
 _Note_: Before running the script make sure to set the location of your archive. 
 
+## The Background Scripts
+
+### Camera Settings Check
+
+When in Background Scripts this script is called after each new capture and checks the current camera settings against the stored defaults. If the shutter speed, aperture, or ISO have been changed it will display a notification so you can gently remind the photographer to stop nudging the dial. 
+
+When run from the Scripts menu you can store the current settings, clear the stored settings, or run the check manually. 
