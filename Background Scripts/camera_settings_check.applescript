@@ -73,14 +73,19 @@ on clearSettings()
 end clearSettings
 
 try
-	set dialogAnswer to display dialog "Store current camera settings?" buttons {"Check", "Clear Settings", "Save"} default button 3 cancel button 2
+	try
+		set dialogAnswer to display dialog "Store current camera settings?" buttons {"Check", "Clear Settings", "Save"} default button 3 cancel button 2
+	on error errMsg number errNum
+		log "Clear Settings"
+		clearSettings()
+	end try
 	
 	if button returned of dialogAnswer is "Save" then
+		log "Save Settings"
 		setSettings()
 	else if button returned of dialogAnswer is "Check" then
+		log "Check Settings"
 		checkSettings()
-	else if button returned of dialogAnswer is "Clear Settings" then
-		
 	end if
 end try
 
