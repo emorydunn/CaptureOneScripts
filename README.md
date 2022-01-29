@@ -113,8 +113,12 @@ _Note_: Before running the script make sure to set the location of your archive.
 
 ## The Background Scripts
 
+Scripts in this section are run automatically by Capture One after certain events. In order for them to work they must be installed in `~/Library/Scripts/Capture One Scripts/Background Scripts`. 
+
 ### Camera Settings Check
 
-When in Background Scripts this script is called after each new capture and checks the current camera settings against the stored defaults. If the shutter speed, aperture, or ISO have been changed it will display a notification so you can gently remind the photographer to stop nudging the dial. 
+After each new capture and checks the current camera settings against the stored defaults. If the shutter speed, aperture, or ISO have been changed it will display a notification so you can gently remind the photographer to stop nudging the dial. 
 
 When run from the Scripts menu you can store the current settings, clear the stored settings, or run the check manually. 
+
+_Note_: If you have settings that limit the delivery of notifications you may miss a settings change. 
