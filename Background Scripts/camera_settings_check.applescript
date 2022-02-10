@@ -40,6 +40,7 @@ on checkSettings()
 		end if
 	on error errMsg number errNum
 		log errMsg
+		display notification errMsg with title "Error Retreiving Settings" sound name "sosumi"
 	end try
 end checkSettings
 
