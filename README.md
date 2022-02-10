@@ -1,21 +1,21 @@
 # CaptureOneScripts
 A collection of AppleScripts for use with Capture One.
 
-| Script                          | Compatibility | Shortcut       |
+| Script                          | Compatibility | Shortcut        |
 |---------------------------------|--------------:|----------------:|
-| add_capture_to_favs             | 9+            | <kbd>⌃f</kbd>
-| apply_keywords                  | 10+           | <kbd>⇧⌘K</kbd>
-| batch_rename_collection         | 12+           |
-| make_new_dir                    | 9+            | <kbd>⌃n</kbd>
-| select_next_capture             | 12+           | <kbd>⌃↑</kbd>
-| select_previous_capture         | 12+           | <kbd>⌃↓</kbd>
-| smart_album_for_selection       | 9+            |
-| select_next_primary_variant     | 12+           |
-| select_previous_primary_variant | 12+           |
-| select_next_variants            | 12+           |
-| select_previous_variants        | 12+           |
-| move_to_archive                 | 20+           |
-| camera_settings_check           | 20+           |
+| add_capture_to_favs             | 9+            | <kbd>⌃f</kbd>   |
+| apply_keywords                  | 10+           | <kbd>⇧⌘K</kbd>  |
+| batch_rename_collection         | 12+           |                 |
+| make_new_dir                    | 9+            | <kbd>⌃n</kbd>   |
+| select_next_capture             | 12+           | <kbd>⌃↑</kbd>   |
+| select_previous_capture         | 12+           | <kbd>⌃↓</kbd>   |
+| smart_album_for_selection       | 9+            |                 |
+| select_next_primary_variant     | 12+           |                 |
+| select_previous_primary_variant | 12+           |                 |
+| select_next_variants            | 12+           |                 |
+| select_previous_variants        | 12+           |                 |
+| move_to_archive                 | 20+           |                 |
+| camera_settings_check           | 20+           |                 |
 
 ## Installation
 
@@ -121,4 +121,14 @@ After each new capture and checks the current camera settings against the stored
 
 When run from the Scripts menu you can store the current settings, clear the stored settings, or run the check manually. 
 
-_Note_: If you have settings that limit the delivery of notifications you may miss a settings change. 
+#### Troubleshooting
+
+There are a few common ways for this script to appear to not be working, usually involving notification preferences. 
+
+1. Enable notifications for Capture One and Script Editor
+    1. Set the alert style to Banners or Alerts
+    2. If you don't want the alerts to build up disable Show in Notification Center 
+2. Enable Allow Notification when mirroring or sharing the display
+3. Disable Do Not Disturb
+    1. Or, allow notifications from Capture One and Script Editor in Do Not Disturb 
+
