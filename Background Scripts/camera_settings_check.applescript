@@ -40,7 +40,16 @@ on checkSettings()
 		end if
 	on error errMsg number errNum
 		log errMsg
-		display notification errMsg with title "Error Retreiving Settings" sound name "sosumi"
+		(* 
+		Uncomment the following line to be notified of any script errors. 
+		
+		Intended for debugging only. 
+		
+		This will potentially post a lot of notifications, specifically if there
+		aren't any saved settings. 
+		*)
+		
+		-- display notification errMsg with title "Error Retreiving Settings" sound name "sosumi"
 	end try
 end checkSettings
 
