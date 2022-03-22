@@ -62,7 +62,7 @@ on getDirs(askOnce)
 end getDirs
 
 on makeDirs(dirNames)
-	tell front document of application "Capture One 20"
+	tell front document of application "Capture One 22"
 		set currentCaptureDir to captures
 		tell application "Finder" to set captureName to name of folder currentCaptureDir
 		
@@ -96,11 +96,7 @@ on makeDirs(dirNames)
 end makeDirs
 
 on addFavorites(dirPaths, setCapture)
-	tell front document of application "Capture One 20"
-		
-		if my resetCaptureCounter then
-			set capture counter to 0
-		end if
+	tell front document of application "Capture One 22"
 		
 		-- Add all paths to favorites
 		repeat with dirPath in dirPaths
@@ -110,6 +106,11 @@ on addFavorites(dirPaths, setCapture)
 		if setCapture is true and (count of dirPaths) is greater than 0 then
 			-- Set the first item as the capture folder
 			set captures to first item in dirPaths
+		end if
+		
+		-- Reset the counter
+		if my resetCaptureCounter and (count of dirPaths) is greater than 0 then
+			set capture counter to 0
 		end if
 	end tell
 	
