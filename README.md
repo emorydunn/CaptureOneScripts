@@ -1,21 +1,24 @@
 # CaptureOneScripts
+
 A collection of AppleScripts for use with Capture One.
 
-| Script                          | Compatibility | Shortcut        |
-|---------------------------------|--------------:|----------------:|
-| add_capture_to_favs             | 9+            | <kbd>⌃f</kbd>   |
-| apply_keywords                  | 10+           | <kbd>⇧⌘K</kbd>  |
-| batch_rename_collection         | 12+           |                 |
-| make_new_dir                    | 9+            | <kbd>⌃n</kbd>   |
-| select_next_capture             | 12+           | <kbd>⌃↑</kbd>   |
-| select_previous_capture         | 12+           | <kbd>⌃↓</kbd>   |
-| smart_album_for_selection       | 9+            |                 |
-| select_next_primary_variant     | 12+           |                 |
-| select_previous_primary_variant | 12+           |                 |
-| select_next_variants            | 12+           |                 |
-| select_previous_variants        | 12+           |                 |
-| move_to_archive                 | 20+           |                 |
-| camera_settings_check           | 20+           |                 |
+| Script                          | Compatibility |       Shortcut |
+| ------------------------------- | ------------: | -------------: |
+| add_capture_to_favs             |            9+ |  <kbd>⌃f</kbd> |
+| apply_keywords                  |           10+ | <kbd>⇧⌘K</kbd> |
+| batch_rename_collection         |           12+ |                |
+| make_new_dir                    |            9+ |  <kbd>⌃n</kbd> |
+| select_next_capture             |           12+ |  <kbd>⌃↑</kbd> |
+| select_previous_capture         |           12+ |  <kbd>⌃↓</kbd> |
+| smart_album_for_selection       |            9+ |                |
+| select_next_primary_variant     |           12+ |                |
+| select_previous_primary_variant |           12+ |                |
+| select_next_variants            |           12+ |                |
+| select_previous_variants        |           12+ |                |
+| move_to_archive                 |           20+ |                |
+| camera_settings_check           |           20+ |                |
+| select_9_up                     |           20+ |                |
+| count_favorites                 |           20+ |                |
 
 ## Installation
 
@@ -33,7 +36,7 @@ Some notes:
 When setting keyboard shortcuts via the command line System Preferences doesn't know to look for the shortcuts in that app. However, there is a workaround:
 
 1. [Add a shortcut][shortcut] for Capture One. Any shortcut will do.
-    - For example, just enter `Scripts` as the menu item and <kbd>⌃s</kbd> as the shortcut.
+   - For example, just enter `Scripts` as the menu item and <kbd>⌃s</kbd> as the shortcut.
 2. Quit both Capture One and System Preferences.
 3. Run `install.command`
 4. Remove the shortcut you added in step one.
@@ -70,7 +73,7 @@ the capture directory is "Capture", in which case new folders are made inside.
 Set `repeatPrompt` to `false` to only prompt for one name.
 
 If `setCaptureFolder` is `true` then the capture directory will be
-set to the *first* directory name entered.
+set to the _first_ directory name entered.
 
 Set `resetCaptureCounter` to `true` to set the capture counter to 1 when making a new folder.
 
@@ -107,28 +110,35 @@ The `primary_variant` version only shifts the primary variant and will deselect 
 
 ### Move to Archive
 
-This script moves the images in the current collection into a central archive folder organized by date. The RAW file is relinked in the catalogue after the move. 
+This script moves the images in the current collection into a central archive folder organized by date. The RAW file is relinked in the catalogue after the move.
 
-_Note_: Before running the script make sure to set the location of your archive. 
+_Note_: Before running the script make sure to set the location of your archive.
+
+### Select `n` Up
+
+This script selects the last `n` (by default 9) images in a collection. Useful for quickly throwing up a full "page" of images for an AD or photographer to review.
+
+### Count Favorites
+
+A script that displays either a notification or a dialogue with the number of user favorites in the current session.
 
 ## The Background Scripts
 
-Scripts in this section are run automatically by Capture One after certain events. In order for them to work they must be installed in `~/Library/Scripts/Capture One Scripts/Background Scripts`. 
+Scripts in this section are run automatically by Capture One after certain events. In order for them to work they must be installed in `~/Library/Scripts/Capture One Scripts/Background Scripts`.
 
 ### Camera Settings Check
 
-After each new capture and checks the current camera settings against the stored defaults. If the shutter speed, aperture, or ISO have been changed it will display a notification so you can gently remind the photographer to stop nudging the dial. 
+After each new capture and checks the current camera settings against the stored defaults. If the shutter speed, aperture, or ISO have been changed it will display a notification so you can gently remind the photographer to stop nudging the dial.
 
-When run from the Scripts menu you can store the current settings, clear the stored settings, or run the check manually. 
+When run from the Scripts menu you can store the current settings, clear the stored settings, or run the check manually.
 
 #### Troubleshooting
 
-There are a few common ways for this script to appear to not be working, usually involving notification preferences. 
+There are a few common ways for this script to appear to not be working, usually involving notification preferences.
 
 1. Enable notifications for Capture One and Script Editor
-    1. Set the alert style to Banners or Alerts
-    2. If you don't want the alerts to build up disable Show in Notification Center 
+   1. Set the alert style to Banners or Alerts
+   2. If you don't want the alerts to build up disable Show in Notification Center
 2. Enable Allow Notification when mirroring or sharing the display
 3. Disable Do Not Disturb
-    1. Or, allow notifications from Capture One and Script Editor in Do Not Disturb 
-
+   1. Or, allow notifications from Capture One and Script Editor in Do Not Disturb
