@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=`dirname "${0}"`
 INSTALL_DIR="${HOME}/Library/Scripts/Capture One Scripts"
-CAPTUREONE="com.captureone.captureone13"
+CAPTUREONE="com.captureone.captureone15"
 
 ADD_SHORTCUT="defaults write ${CAPTUREONE} NSUserKeyEquivalents -dict-add"
 
@@ -20,6 +20,7 @@ ${ADD_SHORTCUT} "Scriptsmake_new_dir" "^n"
 
 ${ADD_SHORTCUT} "Scriptsselect_previous_capture" "^↑"
 ${ADD_SHORTCUT} "Scriptsselect_next_capture" "^↓"
+${ADD_SHORTCUT} "Scriptsselect_9_up" "^9"
 
 ${ADD_SHORTCUT} "Scriptsadd_capture_to_favs" "^f"
 echo "Done"

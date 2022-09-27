@@ -17,7 +17,7 @@ A collection of AppleScripts for use with Capture One.
 | select_previous_variants        |           12+ |                |
 | move_to_archive                 |           20+ |                |
 | camera_settings_check           |           20+ |                |
-| select_9_up                     |           20+ |                |
+| select_9_up                     |           20+ |  <kbd>⌃9</kbd> |
 | count_favorites                 |           20+ |                |
 
 ## Installation
@@ -26,7 +26,7 @@ Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture
 
 Some notes:
 
-- The script defaults to adding shortcuts for Capture One 20
+- The script defaults to adding shortcuts for Capture One 22
 - Restart Capture One after installation
 - macOS might not show the shortcuts in System Preferences
 - Background scripts are _not_ installed by default, please copy the ones you want to use manually
