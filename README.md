@@ -19,6 +19,7 @@ A collection of AppleScripts for use with Capture One.
 | camera_settings_check           |           20+ |                |
 | select_9_up                     |           20+ |  <kbd>⌃9</kbd> |
 | count_favorites                 |           20+ |                |
+| auto_process                    |           20+ |                |
 
 ## Installation
 
@@ -142,3 +143,7 @@ There are a few common ways for this script to appear to not be working, usually
 2. Enable Allow Notification when mirroring or sharing the display
 3. Disable Do Not Disturb
    1. Or, allow notifications from Capture One and Script Editor in Do Not Disturb
+
+### Auto Process New Captures
+
+After each new capture process the image using either a recipe specified in the script or with the recipes enabled in Capture One.
