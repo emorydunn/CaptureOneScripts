@@ -9,15 +9,20 @@
   Created by Emory Dunn
 *)
 
-set theRecipe to "*YOUR RECIPE NAME*"
-set useSelected to true
 
 on CO_CaptureDone(rawFilePath)
-	tell application "Capture One 20.0"
+	
+	(** Settings **)
+	set theRecipe to "*YOUR RECIPE NAME*"
+	set useSelected to true
+	(** End Settings **)
+	
+	tell application "Capture One 22"
 		if useSelected then
 			process rawFilePath
 		else
 			process rawFilePath recipe theRecipe
 		end if
 	end tell
+	
 end CO_CaptureDone
