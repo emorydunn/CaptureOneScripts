@@ -20,6 +20,7 @@ A collection of AppleScripts for use with Capture One.
 | select_9_up                     |           20+ |  <kbd>⌃9</kbd> |
 | count_favorites                 |           20+ |                |
 | auto_process                    |           20+ |                |
+| sorted_trash                    | 20+           | <kbd>⌥⌘⌫</kbd>  |
 
 ## Installation
 
@@ -122,6 +123,12 @@ This script selects the last `n` (by default 9) images in a collection. Useful f
 ### Count Favorites
 
 A script that displays either a notification or a dialogue with the number of user favorites in the current session.
+
+### Sorted Trash
+
+Trash variants into subfolders based on the current image folder name. This helps keep files organized by shot, much like you might do for the Capture and Output folders, think of it as the `Image Folder Name` token name for the trash. 
+
+The downside is image will no longer be visible in the session trash, which doesn't show subfolders. 
 
 ## The Background Scripts
 
