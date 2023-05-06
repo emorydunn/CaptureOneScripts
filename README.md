@@ -20,7 +20,8 @@ A collection of AppleScripts for use with Capture One.
 | select_9_up                     |           20+ |  <kbd>⌃9</kbd> |
 | count_favorites                 |           20+ |                |
 | auto_process                    |           20+ |                |
-| sorted_trash                    | 20+           | <kbd>⌥⌘⌫</kbd>  |
+| sorted_trash                    |           20+ | <kbd>⌥⌘⌫</kbd> |
+| copy_variant_names              |           20+ |                |
 
 ## Installation
 
@@ -126,9 +127,13 @@ A script that displays either a notification or a dialogue with the number of us
 
 ### Sorted Trash
 
-Trash variants into subfolders based on the current image folder name. This helps keep files organized by shot, much like you might do for the Capture and Output folders, think of it as the `Image Folder Name` token name for the trash. 
+Trash variants into subfolders based on the current image folder name. This helps keep files organized by shot, much like you might do for the Capture and Output folders, think of it as the `Image Folder Name` token name for the trash.
 
-The downside is image will no longer be visible in the session trash, which doesn't show subfolders. 
+The downside is image will no longer be visible in the session trash, which doesn't show subfolders.
+
+### Copy Variant Names
+
+A small script to copy the names of every variant in the current collection to the clipboard.
 
 ## The Background Scripts
 
