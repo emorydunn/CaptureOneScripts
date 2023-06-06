@@ -22,6 +22,7 @@ A collection of AppleScripts for use with Capture One.
 | auto_process                    |           20+ |                |
 | sorted_trash                    |           20+ | <kbd>⌥⌘⌫</kbd> |
 | copy_variant_names              |           20+ |                |
+| add_crop_metadata               |           23+ |                |
 
 ## Installation
 
@@ -134,6 +135,22 @@ The downside is image will no longer be visible in the session trash, which does
 ### Copy Variant Names
 
 A small script to copy the names of every variant in the current collection to the clipboard.
+
+### Add Crop Metadata
+
+Save the current aspect ratio in the IPTC Content Description.
+
+**Important Notes**
+
+This script gets the name of the currently selected aspect ratio in the
+crop tool, it does _not_ read the aspect ratio of the variant.
+As such there are some limitations to what it can do.
+
+By default this script only applies metadata to the primary variant
+because the crop ratio is more likely to match the selected ratio.
+
+When `applyToAllVariants` it's important to make sure all selected
+variants actually cropped to the desired ratio.
 
 ## The Background Scripts
 
