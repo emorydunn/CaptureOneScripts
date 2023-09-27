@@ -23,6 +23,7 @@ A collection of AppleScripts for use with Capture One.
 | sorted_trash                    |           20+ | <kbd>⌥⌘⌫</kbd> |
 | copy_variant_names              |           20+ |                |
 | add_crop_metadata               |           23+ |                |
+| flip_crop                       |           23+ |                |
 
 ## Installation
 
@@ -151,6 +152,10 @@ because the crop ratio is more likely to match the selected ratio.
 
 When `applyToAllVariants` it's important to make sure all selected
 variants actually cropped to the desired ratio.
+
+### Flip Crop
+
+This script flips the orientation of the crop of selected variants.
 
 ## The Background Scripts
 
