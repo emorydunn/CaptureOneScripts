@@ -8,7 +8,7 @@
 
   Created by Emory Dunn
 *)
-
+display notification with title "Error Processing Images" sound name "sosumi"
 
 on CO_CaptureDone(rawFilePath)
 	
@@ -17,12 +17,17 @@ on CO_CaptureDone(rawFilePath)
 	set useSelected to true
 	(** End Settings **)
 	
-	tell application "Capture One 22"
+	tell application "Capture One 23"
 		if useSelected then
-			process rawFilePath
+			set batchID to process rawFilePath
 		else
-			process rawFilePath recipe theRecipe
+			set batchID to process rawFilePath recipe theRecipe
 		end if
 	end tell
 	
+	if batchID starts with "ERROR" then
+		display notification batchID with title "Error Processing Images" sound name "sosumi"
+	end if
+	
 end CO_CaptureDone
+
