@@ -24,6 +24,8 @@ A collection of AppleScripts for use with Capture One.
 | copy_variant_names              |           20+ |                |
 | add_crop_metadata               |           23+ |                |
 | flip_crop                       |           23+ |                |
+| clean_faves                     |           23+ |                |
+| resume_counter                  |           23+ | <kbd>⌥⌘R</kbd> |
 
 ## Installation
 
@@ -103,7 +105,9 @@ The script splits the name on the delimiter and selects the `itemNumber` item in
 
 ### Batch Rename Collection
 
-Sorts the current collection by date (ascending), sets the rename counter to 1, and renames all variants.
+Sorts the current collection by date (ascending) and renames all variants.
+
+By default the script will read the counter from the first variant and use that to set the rename counter. This will, in effect, rename in place. This setting can be changed to always reset the counter.
 
 ### Select Next/Previous Primary Variant/Variants
 
@@ -156,6 +160,21 @@ variants actually cropped to the desired ratio.
 ### Flip Crop
 
 This script flips the orientation of the crop of selected variants.
+
+### Clean Favorites
+
+Removes all favorites from the current session. If a favorite is also the capture folder that favorite won't be removed.
+
+### Resume Counter
+
+Sets the capture counter to continue from the last image in a collection.
+
+The script uses a regular expression to read the last number in the last image to determine where the counter left off. The capture counter is then set to this number, meaning the next capture will be `n + 1`.
+
+The script assumes a few things:
+
+1. You're using the capture counter token at the end of the filename
+2. The counter is delimited by a non-number character (`_`, `.`, etc.)
 
 ## The Background Scripts
 
