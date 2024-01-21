@@ -18,7 +18,7 @@ use scripting additions
 
 (**  Script **)
 
-tell front document of application "Capture One 23"
+tell front document of application "Capture One"
 	
 	if sortCollection then
 		-- Sort the collection by date ascending
