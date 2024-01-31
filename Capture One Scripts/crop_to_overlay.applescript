@@ -42,14 +42,21 @@ end tell
 
 (* Read the overlay image properties *)
 tell application "Image Events"
-	set overlayImage to open imagePath
-	
-	set overlayDimensions to dimensions of overlayImage
-	set overlayWidth to item 1 of overlayDimensions
-	set overlayHeight to item 2 of overlayDimensions
-	set overlayRatio to overlayWidth / overlayHeight
-	
-	close overlayImage
+	try
+		set overlayImage to open imagePath
+		
+		set overlayDimensions to dimensions of overlayImage
+		set overlayWidth to item 1 of overlayDimensions
+		set overlayHeight to item 2 of overlayDimensions
+		set overlayRatio to overlayWidth / overlayHeight
+		
+		close overlayImage
+	on error
+		tell current application
+			display alert "Could not read the overlay file." message "The script failed to read the dimensions of the file." as critical
+			return
+		end tell
+	end try
 end tell
 
 (* Calculate the crop size *)
