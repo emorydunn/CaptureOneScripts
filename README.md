@@ -26,6 +26,7 @@ A collection of AppleScripts for use with Capture One.
 | flip_crop                       |           23+ |                |
 | clean_faves                     |           23+ |                |
 | resume_counter                  |           23+ | <kbd>⌥⌘R</kbd> |
+| crop_to_overlay                 |           23+ |                |
 
 ## Installation
 
@@ -175,6 +176,12 @@ The script assumes a few things:
 
 1. You're using the capture counter token at the end of the filename
 2. The counter is delimited by a non-number character (`_`, `.`, etc.)
+
+### Crop to Overlay
+
+Crop the primary variant to the overlay, with some caveats.
+
+We can't crop to outside of the image, so the overlay must be fully within the bounds of the image. This means the scale must be 100 or less and none of the edges of the overlay cross the image bounds.
 
 ## The Background Scripts
 
