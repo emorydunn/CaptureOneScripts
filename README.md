@@ -27,6 +27,7 @@ A collection of AppleScripts for use with Capture One.
 | clean_faves                     |           23+ |                |
 | resume_counter                  |           23+ | <kbd>⌥⌘R</kbd> |
 | crop_to_overlay                 |           23+ |                |
+| add_suffix                      |           23+ |                |
 
 ## Installation
 
@@ -34,7 +35,7 @@ Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture
 
 Some notes:
 
-- The script defaults to adding shortcuts for Capture One 22
+- The script defaults to adding shortcuts for Capture One 23
 - Restart Capture One after installation
 - macOS might not show the shortcuts in System Preferences
 - Background scripts are _not_ installed by default, please copy the ones you want to use manually
@@ -182,6 +183,14 @@ The script assumes a few things:
 Crop the primary variant to the overlay, with some caveats.
 
 We can't crop to outside of the image, so the overlay must be fully within the bounds of the image. This means the scale must be 100 or less and none of the edges of the overlay cross the image bounds.
+
+### Add Suffix
+
+Appends the specified suffix to variants.
+
+Variants which already have the suffix, if any, will not be renamed.
+If all variants have the suffix the suffix will be removed.
+By default only selected variants are renamed.
 
 ## The Background Scripts
 
