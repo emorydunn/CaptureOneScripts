@@ -30,6 +30,8 @@ A collection of AppleScripts for use with Capture One.
 | add_suffix                      |           23+ |                |
 | crop_to_ratio                   |           23+ |                |
 
+If you find these scripts useful please consider sponsoring the project, a lot of time and effort has gone into writing and maintaining the scripts.
+
 ## Installation
 
 Run `install.command`, which will copy the scripts to `~/Library/Scripts/Capture One Scripts` and set up the keyboard shortcuts.
