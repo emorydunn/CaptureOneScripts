@@ -28,6 +28,7 @@ A collection of AppleScripts for use with Capture One.
 | resume_counter                  |           23+ | <kbd>⌥⌘R</kbd> |
 | crop_to_overlay                 |           23+ |                |
 | add_suffix                      |           23+ |                |
+| crop_to_ratio                   |           23+ |                |
 
 ## Installation
 
@@ -183,6 +184,10 @@ The script assumes a few things:
 Crop the primary variant to the overlay, with some caveats.
 
 We can't crop to outside of the image, so the overlay must be fully within the bounds of the image. This means the scale must be 100 or less and none of the edges of the overlay cross the image bounds.
+
+### Crop to Ratio
+
+Apply a crop with the specified ratio to the primary variant
 
 ### Add Suffix
 
