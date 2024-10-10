@@ -13,13 +13,55 @@
 
 (** Settings **)
 
-set theSuffix to "_Bowl"
+-- The default suffix
+set theSuffix to "_Plate"
 
+-- Ask for a suffix to be entered
+set prompt to true
+
+-- Save the suffix that was entered
+set rememberPreviousSuffix to true
+
+-- Only add the suffix to selected variants
 set selectedOnly to true
 
 (**  Script **)
-use application "Capture One"
 
+if prompt then
+	log "Asking for new suffix"
+	if rememberPreviousSuffix then
+		log "Attempting to read previous suffix from user defaults"
+		try
+			set RenameSuffix to do shell script "defaults read com.captureone.captureone16 RenameSuffix"
+		on error
+			log "Failed to read previous suffix"
+			set RenameSuffix to theSuffix
+		end try
+	else
+		set RenameSuffix to theSuffix
+	end if
+	
+	try
+		set theResponse to display dialog ¬
+			"Add suffix to images" default answer ¬
+			RenameSuffix buttons {"Cancel", "Continue"} ¬
+			default button ¬
+			"Continue" cancel button "Cancel"
+		
+		set theSuffix to text returned of theResponse
+		
+	on error
+		return
+	end try
+	
+	try
+		do shell script "defaults write com.captureone.captureone16 RenameSuffix " & theSuffix
+	on error
+		log "Failed to save suffix"
+	end try
+end if
+
+use application "Capture One"
 tell current document
 	
 	-- Figure out which images need renaming
