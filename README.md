@@ -193,11 +193,11 @@ Apply a crop with the specified ratio to the primary variant
 
 ### Add Suffix
 
-Appends the specified suffix to variants.
+Appends the specified suffix to variants. The script can be configured to prompt you for a suffix when running.
 
-Variants which already have the suffix, if any, will not be renamed.
-If all variants have the suffix the suffix will be removed.
-By default only selected variants are renamed.
+- Variants which already have the suffix, if any, will not be renamed.
+- If all variants have the suffix the suffix will be removed.
+- By default only selected variants are renamed.
 
 ## The Background Scripts
 
