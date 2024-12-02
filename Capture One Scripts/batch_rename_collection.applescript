@@ -12,13 +12,16 @@
 -- If enabled the counter is set to 1, otherwise the counter is set based on the first variant
 set resetCounter to false
 
+-- Set the capture counter to match the rename counter
+set syncCaptureCounter to false
+
 (**  Script **)
 
 use AppleScript version "2.5"
 use framework "Foundation"
 use scripting additions
 
-tell front document of application "Capture One 23"
+tell front document of application "Capture One"
 	--  Sort by date
 	set sorting order of current collection to by date
 	set sorting reversed of current collection to false
@@ -40,6 +43,10 @@ tell front document of application "Capture One 23"
 	end if
 	
 	batch rename variants theVariants
+	
+	if syncCaptureCounter then
+		set capture counter to counter of batch rename settings
+	end if
 end tell
 
 property |app| : a reference to current application

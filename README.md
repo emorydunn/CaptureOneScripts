@@ -114,6 +114,8 @@ Sorts the current collection by date (ascending) and renames all variants.
 
 By default the script will read the counter from the first variant and use that to set the rename counter. This will, in effect, rename in place. This setting can be changed to always reset the counter.
 
+You can also enable `syncCaptureCounter` to set the capture counter to match the rename counter so new captures will continue the numbering from the renamed files.
+
 ### Select Next/Previous Primary Variant/Variants
 
 A collection of four scripts to shift the selection of variants.
