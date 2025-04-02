@@ -20,7 +20,7 @@ on CO_CaptureDone(rawFilePath)
 		if my useSelected then
 			set batchID to process rawFilePath
 		else
-			set batchID to process rawFilePath recipe theRecipe
+			set batchID to process rawFilePath recipe my theRecipe
 		end if
 	end tell
 	
