@@ -15,18 +15,17 @@ set useSelected to true
 (** End Settings **)
 
 on CO_CaptureDone(rawFilePath)
-
-	tell application "Capture One 23"
-		if useSelected then
+	
+	tell application "Capture One"
+		if my useSelected then
 			set batchID to process rawFilePath
 		else
 			set batchID to process rawFilePath recipe theRecipe
 		end if
 	end tell
-
+	
 	if batchID starts with "ERROR" then
 		display notification batchID with title "Error Processing Images" sound name "sosumi"
 	end if
-
+	
 end CO_CaptureDone
-
